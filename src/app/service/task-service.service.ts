@@ -25,4 +25,8 @@ export class TaskServiceService {
   postTask() {
     return this.http.post(this.url, this.task);
   }
+
+  putTask() {
+    return this.http.put(this.url, this.task);
+  }
 }

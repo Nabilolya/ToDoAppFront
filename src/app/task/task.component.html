@@ -3,7 +3,7 @@
         <th>The Task To Do</th>
     </thead>
     <tbody>
-        <tr *ngFor="let item of TaskService.tasks">
+        <tr (click)="fillData(item)" *ngFor="let item of TaskService.tasks">
           <td>{{item.description}}</td>
         </tr>
     </tbody>

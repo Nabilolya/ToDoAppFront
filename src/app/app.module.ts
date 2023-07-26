@@ -15,6 +15,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TaskComponent } from './task/task.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AddTaskComponent } from './add-task/add-task.component'
+import { FormsModule } from '@angular/forms'
+
 
 
 
@@ -42,7 +44,9 @@ import { AddTaskComponent } from './add-task/add-task.component'
     ReactiveFormsModule,
     DragDropModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,4 +15,10 @@ export class TaskComponent {
     this.TaskService.getAllTasks();
   }
 
+  fillData(item) {
+    this.TaskService.task.id = item.id;
+    this.TaskService.task.description = item.description;
+    console.log(" this is from fill" + this.TaskService.task);
+  }
+
 }

@@ -1,7 +1,8 @@
-<form ngForm="form" >
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
 <div class="form-group">
+    <input type="hidden" name="id" [(ngModel)]="TaskService.task.id">
     <label for="description"></label>
-    <input type="text" name="description" class="form-control">
+    <input type="text" [(ngModel)]="TaskService.task.description" name="description" class="form-control">
 </div>
 <input type="submit" class="btn btn-dark btn-lg" value="Save Task">
 </form>
