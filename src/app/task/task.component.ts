@@ -20,5 +20,12 @@ export class TaskComponent {
     this.TaskService.task.description = item.description;
     console.log(" this is from fill" + this.TaskService.task);
   }
+  delete(id) {
+    this.TaskService.deleteTask(id).subscribe(
+      res => {
+        this.TaskService.getAllTasks()
+      }
+    );
+  }
 
 }

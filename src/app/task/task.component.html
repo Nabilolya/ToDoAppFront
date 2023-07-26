@@ -1,10 +1,12 @@
 <table class="table table-bordered table-hover">
     <thead>
         <th>The Task To Do</th>
+        <th></th>
     </thead>
     <tbody>
         <tr (click)="fillData(item)" *ngFor="let item of TaskService.tasks">
           <td>{{item.description}}</td>
+          <td (click)="delete(item.id)"><span class="btn btn-danger">Delete</span></td>
         </tr>
     </tbody>
 </table>
